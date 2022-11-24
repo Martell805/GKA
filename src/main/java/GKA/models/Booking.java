@@ -24,4 +24,6 @@ public class Booking {
     protected Ticket ticket;
 
     protected boolean paid;
+
+    protected boolean actual;
 }

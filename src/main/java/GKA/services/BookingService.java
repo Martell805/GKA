@@ -5,6 +5,8 @@ import GKA.repositories.BookingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class BookingService {
@@ -24,5 +26,9 @@ public class BookingService {
 
     public Booking find(Long id){
         return this.bookingRepository.findById(id).orElse(null);
+    }
+
+    public List<Booking> findByUserId(Long id){
+        return this.bookingRepository.findAllByUserId(id);
     }
 }

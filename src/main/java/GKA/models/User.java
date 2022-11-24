@@ -3,7 +3,6 @@ package GKA.models;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -19,7 +18,4 @@ public class User {
     protected String email;
     protected String password;
     protected int score;
-
-    @OneToMany(mappedBy = "user")
-    protected List<Booking> active_bookings;
 }
