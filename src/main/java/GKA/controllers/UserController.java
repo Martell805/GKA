@@ -13,13 +13,13 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping()
-    public ResponseEntity<User> addStudent(@RequestBody User student) {
-        return ResponseEntity.ok(this.userService.add(student));
+    public ResponseEntity<User> add(@RequestBody User user) {
+        return ResponseEntity.ok(this.userService.add(user));
     }
 
     @PutMapping()
-    public ResponseEntity<User> editStudent(@RequestBody User student) {
-        User result = this.userService.edit(student);
+    public ResponseEntity<User> edit(@RequestBody User user) {
+        User result = this.userService.edit(user);
 
         if (result == null) return ResponseEntity.notFound().build();
 
@@ -27,7 +27,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> findStudent(@PathVariable Long id) {
+    public ResponseEntity<User> find(@PathVariable Long id) {
         User result = this.userService.find(id);
 
         if (result == null) return ResponseEntity.notFound().build();
@@ -36,7 +36,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<User> deleteStudent(@PathVariable Long id) {
+    public ResponseEntity<User> delete(@PathVariable Long id) {
         this.userService.delete(id);
 
         return ResponseEntity.ok().build();

@@ -10,16 +10,16 @@ import org.springframework.stereotype.Service;
 public class UserService {
     private final UserRepository userRepository;
 
-    public User add(User student){
-        return this.userRepository.save(student);
+    public User add(User user){
+        return this.userRepository.save(user);
     }
 
     public void delete(Long id){
         this.userRepository.deleteById(id);
     }
 
-    public User edit(User student){
-        return this.userRepository.save(student);
+    public User edit(User user){
+        return this.userRepository.save(user);
     }
 
     public User find(Long id){
