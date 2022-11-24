@@ -25,4 +25,12 @@ public class UserService {
     public User find(Long id){
         return this.userRepository.findById(id).orElse(null);
     }
+
+    public User findByEmail(String email){
+        return this.userRepository.findByEmail(email).orElse(null);
+    }
+
+    public User findByName(String name){
+        return this.userRepository.findByName(name).orElse(null);
+    }
 }

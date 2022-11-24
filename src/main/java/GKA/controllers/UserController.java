@@ -35,6 +35,24 @@ public class UserController {
         return ResponseEntity.ok(result);
     }
 
+    @GetMapping("/email/{email}")
+    public ResponseEntity<User> findByEmail(@PathVariable String email) {
+        User result = this.userService.findByEmail(email);
+
+        if (result == null) return ResponseEntity.notFound().build();
+
+        return ResponseEntity.ok(result);
+    }
+
+    @GetMapping("/name/{name}")
+    public ResponseEntity<User> findByName(@PathVariable String name) {
+        User result = this.userService.findByName(name);
+
+        if (result == null) return ResponseEntity.notFound().build();
+
+        return ResponseEntity.ok(result);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<User> delete(@PathVariable Long id) {
         this.userService.delete(id);
