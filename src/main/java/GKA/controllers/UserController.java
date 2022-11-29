@@ -44,9 +44,9 @@ public class UserController {
         return ResponseEntity.ok(result);
     }
 
-    @GetMapping("/name/{name}")
-    public ResponseEntity<User> findByName(@PathVariable String name) {
-        User result = this.userService.findByName(name);
+    @GetMapping("/name/{fullname}")
+    public ResponseEntity<User> findByName(@PathVariable String fullname) {
+        User result = this.userService.findByFullname(fullname);
 
         if (result == null) return ResponseEntity.notFound().build();
 

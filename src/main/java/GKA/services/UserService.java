@@ -30,7 +30,7 @@ public class UserService {
         return this.userRepository.findByEmail(email).orElse(null);
     }
 
-    public User findByName(String name){
-        return this.userRepository.findByName(name).orElse(null);
+    public User findByFullname(String fullname){
+        return this.userRepository.findByFullname(fullname).orElse(null);
     }
 }

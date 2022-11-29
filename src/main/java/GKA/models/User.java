@@ -14,6 +14,8 @@ public class User {
     @GeneratedValue
     protected Long id;
     protected String name;
+    protected String surname;
+    protected String patronymic;
 
     protected String email;
     protected String password;

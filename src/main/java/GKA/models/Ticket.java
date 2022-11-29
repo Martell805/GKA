@@ -21,10 +21,8 @@ public class Ticket {
     protected Long id;
 
     protected String company;
-    protected String formCountry;
     protected String formAirport;
     protected Calendar fromTime;
-    protected String toCountry;
     protected String toAirport;
     protected Calendar toTime;
     protected int cost;
