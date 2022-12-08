@@ -22,8 +22,8 @@ public class Ticket {
 
     protected String company;
     protected String formAirport;
-    protected LocalDate fromTime;
+    protected String fromTime;
     protected String toAirport;
-    protected LocalDate toTime;
+    protected String toTime;
     protected int cost;
 }

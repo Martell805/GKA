@@ -18,7 +18,7 @@ public class User {
     protected String surname;
     protected String patronymic;
     protected Boolean sex;
-    protected LocalDate birthday;
+    protected String birthday;
 
     @Column(unique = true)
     protected String email;

@@ -4,7 +4,6 @@ import GKA.models.Ticket;
 import GKA.repositories.TicketRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -28,7 +27,7 @@ public class TicketService {
         return this.ticketRepository.findById(id).orElse(null);
     }
 
-    public List<Ticket> findSuitable(LocalDate fromTime, String fromAirport, String toAirport){
+    public List<Ticket> findSuitable(String fromTime, String fromAirport, String toAirport){
         return this.ticketRepository.getAllByFromTimeAndFormAirportAndToAirport(fromTime, fromAirport, toAirport);
     }
 }
