@@ -5,7 +5,7 @@ import GKA.services.TicketService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.Calendar;
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -45,7 +45,7 @@ public class TicketController {
     }
 
     @GetMapping("/{fromTime}/{fromAirport}/{toAirport}")
-    public ResponseEntity<List<Ticket>> find(@PathVariable Calendar fromTime, @PathVariable String fromAirport, @PathVariable String toAirport) {
+    public ResponseEntity<List<Ticket>> find(@PathVariable LocalDate fromTime, @PathVariable String fromAirport, @PathVariable String toAirport) {
         List<Ticket> result = this.ticketService.findSuitable(fromTime, fromAirport, toAirport);
 
         if (result == null) return ResponseEntity.notFound().build();

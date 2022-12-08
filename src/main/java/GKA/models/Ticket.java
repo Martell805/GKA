@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Calendar;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -22,8 +22,8 @@ public class Ticket {
 
     protected String company;
     protected String formAirport;
-    protected Calendar fromTime;
+    protected LocalDate fromTime;
     protected String toAirport;
-    protected Calendar toTime;
+    protected LocalDate toTime;
     protected int cost;
 }

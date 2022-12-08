@@ -3,6 +3,7 @@ package GKA.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -16,6 +17,8 @@ public class User {
     protected String name;
     protected String surname;
     protected String patronymic;
+    protected Boolean sex;
+    protected LocalDate birthday;
 
     @Column(unique = true)
     protected String email;
