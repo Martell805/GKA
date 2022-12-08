@@ -17,7 +17,7 @@ public class User {
     protected String surname;
     protected String patronymic;
 
-    @Column(unique=true)
+    @Column(unique = true)
     protected String email;
     protected String password;
     protected int score;
