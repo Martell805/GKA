@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface TicketRepository extends JpaRepository<Ticket, Long> {
     List<Ticket> getAllByFromTimeAndFromDateAndFormAirportAndToAirport(String fromTime, String fromDate, String fromAirport, String toAirport);
+    List<Ticket> getAllByFromDateAndFormAirportAndToAirport(String fromDate, String fromAirport, String toAirport);
 }

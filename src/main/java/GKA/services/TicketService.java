@@ -30,4 +30,8 @@ public class TicketService {
     public List<Ticket> findSuitable(String fromTime, String fromDate, String fromAirport, String toAirport){
         return this.ticketRepository.getAllByFromTimeAndFromDateAndFormAirportAndToAirport(fromTime, fromDate, fromAirport, toAirport);
     }
+
+    public List<Ticket> findSuitable(String fromDate, String fromAirport, String toAirport){
+        return this.ticketRepository.getAllByFromDateAndFormAirportAndToAirport(fromDate, fromAirport, toAirport);
+    }
 }
