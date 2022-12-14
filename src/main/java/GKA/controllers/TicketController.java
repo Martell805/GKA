@@ -43,9 +43,9 @@ public class TicketController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/{fromTime}/{fromAirport}/{toAirport}")
-    public ResponseEntity<List<Ticket>> find(@PathVariable String fromTime, @PathVariable String fromAirport, @PathVariable String toAirport) {
-        List<Ticket> result = this.ticketService.findSuitable(fromTime, fromAirport, toAirport);
+    @GetMapping("/{fromTime}/{fromDate}/{fromAirport}/{toAirport}")
+    public ResponseEntity<List<Ticket>> find(@PathVariable String fromTime, @PathVariable String fromDate, @PathVariable String fromAirport, @PathVariable String toAirport) {
+        List<Ticket> result = this.ticketService.findSuitable(fromTime, fromDate, fromAirport, toAirport);
 
         if (result == null) return ResponseEntity.notFound().build();
 

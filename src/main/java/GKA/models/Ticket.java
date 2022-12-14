@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -23,7 +22,9 @@ public class Ticket {
     protected String company;
     protected String formAirport;
     protected String fromTime;
+    protected String fromDate;
     protected String toAirport;
     protected String toTime;
+    protected String toDate;
     protected int cost;
 }

@@ -27,7 +27,7 @@ public class TicketService {
         return this.ticketRepository.findById(id).orElse(null);
     }
 
-    public List<Ticket> findSuitable(String fromTime, String fromAirport, String toAirport){
-        return this.ticketRepository.getAllByFromTimeAndFormAirportAndToAirport(fromTime, fromAirport, toAirport);
+    public List<Ticket> findSuitable(String fromTime, String fromDate, String fromAirport, String toAirport){
+        return this.ticketRepository.getAllByFromTimeAndFromDateAndFormAirportAndToAirport(fromTime, fromDate, fromAirport, toAirport);
     }
 }
