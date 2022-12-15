@@ -21,7 +21,10 @@ public class Booking {
     protected User user;
 
     @OneToOne
-    protected Ticket ticket;
+    protected Ticket ticketTo;
+
+    @OneToOne
+    protected Ticket ticketFrom;
 
     protected boolean paid;
 
